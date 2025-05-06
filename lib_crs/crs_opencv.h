@@ -84,7 +84,7 @@ public:
             switch (color_space) {
                 default:
                 case 0: // YCrCb
-                    cv::cvtColor(image, image_YCrCb, CV_BGR2YCrCb);
+                    cv::cvtColor(image, image_YCrCb, cv::COLOR_BGR2YCrCb);
                     cv::split(image_YCrCb, image_channels);
                     break;
                 case 1: // RGB

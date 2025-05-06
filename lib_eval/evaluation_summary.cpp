@@ -28,7 +28,7 @@
  * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
+#define BOOST_TIMER_ENABLE_DEPRECATED
 #include <sstream>
 #include <fstream>
 #include <limits>
@@ -1188,13 +1188,13 @@ void EvaluationSummary::computeSummary(int &gt_max) {
         cv::Mat sp_segmentation;
 //        IOUtil::readMatCSVInt(it->second, sp_segmentation, image.rows, image.cols);
         IOUtil::readMatCSVInt(it->second, sp_segmentation);
-        cv::Mat image = cv::imread(img_file.string(), CV_LOAD_IMAGE_COLOR);
+        cv::Mat image = cv::imread(img_file.string(), cv::IMREAD_COLOR);
         
 //        cv::namedWindow("Image");
 //        cv::imshow("Image", image);
 //        
 //        cv::waitKey(0);
-        
+
         LOG_IF(FATAL, image.rows <= 0 || image.cols <= 0) << "Could not read image: " 
                 << img_file.string() << ".";
         LOG_IF(FATAL, image.channels() != 3) << "Currently only 3-channel images are supported: " 

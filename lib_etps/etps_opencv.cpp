@@ -33,7 +33,6 @@
 #include "segengine.h"
 #include "functions.h"
 #include "utils.h"
-#include "SGMStereo.h"
 #include "etps_opencv.h"
 
 void ETPS_OpenCV::computeSuperpixels(const cv::Mat &image, int region_size, 

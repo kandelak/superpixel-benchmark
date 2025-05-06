@@ -512,12 +512,12 @@ BilateralFilterDriver::BilateralFilterDriver(const std::vector<int> &sizes_, con
 void BilateralFilterDriver::computeImage(const cv::Mat& image, cv::Mat& computed_image) {
     
     cv::Mat image_lab;
-    cv::cvtColor(image, image_lab, CV_BGR2Lab);
+    cv::cvtColor(image, image_lab, cv::COLOR_BGR2Lab);
     
     cv::Mat computed_image_lab;
     Transformation::applyBilateralFilter(image_lab, sizes[current], color_variances[current], 
             space_variances[current], computed_image_lab);
-    cv::cvtColor(computed_image_lab, computed_image, CV_Lab2BGR);
+    cv::cvtColor(computed_image_lab, computed_image, cv::COLOR_Lab2BGR);
     
 }
 
