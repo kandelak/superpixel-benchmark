@@ -29,6 +29,7 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#define BOOST_TIMER_ENABLE_DEPRECATED
 #include <fstream>
 #include <opencv2/opencv.hpp>
 #include <boost/filesystem.hpp>

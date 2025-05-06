@@ -51,6 +51,5 @@ add_library(etps
     structures.cpp
     segengine.cpp
     spixel.cpp
-    SGMStereo.cpp
 )
 target_link_libraries(etps ${OpenCV_LIBS})

@@ -42,7 +42,6 @@ option(BUILD_SEEDS "Build SEEDS" ON)
 option(BUILD_RESEEDS "Build reSEEDS" ON)
 option(BUILD_ERS "Build ERS" ON)
 option(BUILD_CRS "Build CRS" ON)
-option(BUILD_ERGC "Build ERGC" ON)
 
 # Remaining algorithms:
 option(BUILD_FH "Build FH" OFF)
@@ -99,9 +98,6 @@ if(BUILD_CRS)
     add_subdirectory(crs_cli)
 endif()
 
-if(BUILD_ERGC)
-    add_subdirectory(ergc_cli)
-endif()
 
 if(BUILD_FH)
     add_subdirectory(fh_cli)

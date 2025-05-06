@@ -28,7 +28,7 @@
  * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
+#define BOOST_TIMER_ENABLE_DEPRECATED
 #include <opencv2/opencv.hpp>
 #include <boost/filesystem.hpp>
 #include <boost/timer.hpp>

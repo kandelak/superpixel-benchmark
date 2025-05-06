@@ -78,7 +78,7 @@ void Transformation::applyGaussianSamplingErrors(const cv::Mat &image, float var
     std::normal_distribution<float> g(0, variance);
     
     cv::Mat image_gray;
-    cv::cvtColor(image, image_gray, CV_BGR2GRAY);
+    cv::cvtColor(image, image_gray,  cv::COLOR_BGRA2GRAY);
     
     cv::Mat grad_x;
     cv::Mat grad_y;

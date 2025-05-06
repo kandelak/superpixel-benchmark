@@ -1,3 +1,4 @@
+#define BOOST_TIMER_ENABLE_DEPRECATED
 #include <fstream>
 #include <opencv2/opencv.hpp>
 #include <boost/program_options.hpp>
