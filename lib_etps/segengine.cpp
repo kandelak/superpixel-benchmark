@@ -1291,7 +1291,7 @@ Mat SPSegmentationEngine::GetSegmentedImage()
 Mat SPSegmentationEngine::GetSegmentedImagePlain()
 {
     Mat result = origImg.clone();
-    Vec3b blackPixel(0, 0, 0);
+    Vec3b blackPixel(0, 0, 255); // Changed from black (0,0,0) to red (0,0,255)
 
     for (Pixel& p : pixelsImg) {
         if (p.BLeft()) {

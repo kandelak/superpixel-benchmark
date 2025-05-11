@@ -44,7 +44,7 @@ void Visualization::drawContours(const cv::Mat &image, const cv::Mat &labels, cv
     LOG_IF(FATAL, image.channels() != 3) << "Currently only three-channel images are supported.";
     
     contours.create(image.rows, image.cols, CV_8UC3);
-    cv::Vec3b color(0, 0, 0);
+    cv::Vec3b color(0, 0, 255);
     
     for (int i = 0; i < contours.rows; ++i) {
         for (int j = 0; j < contours.cols; ++j) {
